@@ -202,13 +202,15 @@ body {
 }
 
 .gallery-item a,
-.gallery-item a img {
+.gallery-item a img,
+.gallery-item a video {
 	display: block;
 	width: 100%;
 	cursor: pointer;
 }
 
-.gallery-item a img {
+.gallery-item a img,
+.gallery-item a video {
 	max-width: 100%;
 
 }
