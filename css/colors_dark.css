@@ -1,0 +1,17 @@
+:root {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --bg-accent: #404040;
+    
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --text-muted: #cccccc;
+    
+    --brand-primary: #ff6b6b;
+    --brand-secondary: #ffa8a8;
+    
+    --border-dark: #444444;
+    
+    --overlay-blue: rgba(255, 107, 107, 0.8);
+    --shadow-light: rgba(0, 0, 0, 0.15);
+  }

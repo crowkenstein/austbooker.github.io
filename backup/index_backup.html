@@ -17,49 +17,30 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
 
     <!-- Custom styles for this template -->
-    <link href="css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/gallery.css">
 
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
-
 </head>
 
 <body>
  
+<div id="nav-placeholder"></div>
+
 <div id="wrapper">
 
-    <!--TopBar-->
-      <div id="topbar-wrapper">
-          <ul class="topbar-logo">
-               <li class="logo-top"><a href="index.html"><img src="img/logo_2.png" class="img-fluid"></a></li>
-          </ul>
-          
-          <ul class="topbar-nav">
-               <li><a href="mailto:hi@austinbooker.com">Contact</a></li>
-               <li><a href="resume/AustinBooker_Resume.pdf">Resume</a></li>          
-          </ul>
-      </div>
-
-    <!--SideBar-->
-      <div id="sidebar-wrapper">
-          <ul class="sidebar-nav">
-               <li class="logo"><a href="index.html"><img src="img/logo.png" class="img-fluid"></a></li>
-               <li><a href="mailto:hi@austinbooker.com">Contact</a></li>  
-               <li class="listpadding"><a href="resume/AustinBooker_Resume.pdf">Resume</a></li>   
-          </ul>
-      </div>
-  
     <!--Page Content-->  
       <div id="page-content-wrapper">
           <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 nopadding">
-                        
-
-                            <ul class="gallery">
-                            </ul>
-
-                    </div>
+  <script src="js/siteLinks.js"></script>
+  <script src="js/galleryBuilder.js"></script>
+  <ul class="gallery"></ul>
+            </div>
                 </div>
           </div>        
       </div>
@@ -70,6 +51,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
 
+    <script>
+      fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('nav-placeholder').innerHTML = data;
+          var script = document.createElement('script');
+          script.src = 'js/siteLinks.js';
+          script.onload = function() {
+            var sidebarScript = document.createElement('script');
+            sidebarScript.src = 'js/sidebarLinks.js';
+            document.body.appendChild(sidebarScript);
+          };
+          document.body.appendChild(script);
+        });
+    </script>
 
 </body>
 

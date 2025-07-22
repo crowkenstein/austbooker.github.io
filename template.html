@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <meta name="description" content="Physical Lighting Studies - Austin Booker">
+    <meta name="author" content="Austin Booker">
+    <link rel="icon" href="../../favicon.ico">
+    
+    <title>Physical Lighting Studies - Austin Booker</title>
+    
+    <!-- Load all CSS files -->
+    <script src="js/load-styles.js"></script>
+</head>
+
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div id="wrapper">
+    <div id="page-content-wrapper">
+        
+        <main>
+            <!-- Hero Section -->
+            <section class="template-hero-bg hero-top">
+                <div class="template-hero-inner">
+                    <h1>PHYSICAL LIGHTING STUDIES</h1>
+                    <p>
+                        My research on Physically Based Lighting started as a way to improve my skills in this field and understand the way light behaves in real life. It gradually became the main topic I've worked on in 2024 and led to the launch of my first <a href="#" aria-label="View Unreal plugin">Unreal plugin</a>.
+                    </p>
+                </div>
+            </section>
+            
+            <!-- Video Section -->
+            <section class="template-video-container">
+                <iframe 
+                    src="https://player.vimeo.com/video/92435076" 
+                    allow="autoplay; fullscreen; picture-in-picture" 
+                    allowfullscreen
+                    title="Physical Lighting Studies Video">
+                </iframe>
+            </section>
+            
+            <!-- Content Section -->
+            <section class="template-hero-bg hero-bottom">
+                <div class="template-hero-inner">
+                    <h2>RESEARCH INSIGHTS</h2>
+                    <p>
+                        Through extensive experimentation and analysis, I've developed techniques that bridge the gap between theoretical lighting principles and practical implementation in real-time rendering engines.
+                    </p>
+                </div>
+            </section>
+            
+            <!-- Image Gallery -->
+            <section class="template-image-container">
+                <img 
+                    src="img/myherojourney/myherojourney_001.png" 
+                    alt="My Hero Journey Exhibit - First Panel"
+                    loading="lazy">
+            </section>
+            
+            <section class="template-image-container image-spacing">
+                <img 
+                    src="img/myherojourney/myherojourney_002.png" 
+                    alt="My Hero Journey Exhibit - Second Panel"
+                    loading="lazy">
+            </section>
+            
+            <!-- Final Section -->
+            <section class="template-hero-bg image-spacing">
+                <div class="template-hero-inner">
+                    <h2>IMPLEMENTATION</h2>
+                    <p>
+                        The culmination of this research has resulted in practical tools and techniques that can be applied across various projects, from architectural visualization to interactive experiences.
+                    </p>
+                </div>
+            </section>
+            
+        </main>
+        
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
+
+<script>
+    // Load navigation
+    fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+            var script = document.createElement('script');
+            script.src = 'js/siteLinks.js';
+            script.onload = function() {
+                var sidebarScript = document.createElement('script');
+                sidebarScript.src = 'js/sidebarLinks.js';
+                document.body.appendChild(sidebarScript);
+            };
+            document.body.appendChild(script);
+        });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+/* Base Styles */
+* { 
+    box-sizing: border-box; 
+}
+
+body {
+    background: var(--bg-primary);
+    font-family: 'Muli', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Utility Classes */
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.listpadding {
+    padding-bottom: 50px;
+}

@@ -1,0 +1,23 @@
+/* Color Theme Variables */
+:root {
+    /* Background Colors */
+    --bg-primary: #040404;
+    --bg-secondary: #23272b;
+    --bg-accent: #181c20;
+    
+    /* Text Colors */
+    --text-primary: #f3f3f3;
+    --text-secondary: #d0d0d0;
+    --text-muted: #ecf0f1;
+    
+    /* Brand Colors */
+    --brand-primary: #3399ff;
+    --brand-secondary: #7ecfff;
+    
+    /* Border Colors */
+    --border-dark: #080808;
+    
+    /* Overlay Colors */
+    --overlay-blue: rgba(51, 123, 255, 0.8);
+    --shadow-light: rgba(0, 0, 0, 0.08);
+  }

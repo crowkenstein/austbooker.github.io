@@ -1,0 +1,241 @@
+/* Base Styles */
+* { 
+    box-sizing: border-box; 
+}
+
+body {
+    background: #040404;
+    font-family: 'Muli', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.nopadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.listpadding {
+    padding-bottom: 50px;
+}
+
+/* Logo Styles */
+.logo {
+    padding: 0 0 0 35px;
+    list-style: none;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.logo-top {
+    padding: 0;
+    list-style: none;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    width: 300px;
+}
+
+/* Top Bar (Mobile) */
+#topbar-wrapper {
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    height: 225px;
+    overflow: hidden;
+    background: inherit;
+    border-bottom: 1px solid #080808;
+    font-size: 15px;
+    letter-spacing: 1px;
+    word-spacing: 20px;
+}
+
+.topbar-logo {
+    padding: 25px 0 0 0;
+    list-style: none;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.topbar-nav {
+    padding: 5px 0 0 0;
+    list-style: none;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.topbar-nav li {
+    display: inline-block;
+}
+
+.topbar-nav li a {
+    color: #ecf0f1 !important;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+.topbar-nav li a:hover {
+    color: #3399ff !important;
+}
+
+/* Sidebar (Desktop) */
+#sidebar-wrapper {
+    position: absolute;
+    z-index: 1000;
+    width: 280px;
+    height: 100%;
+    overflow-y: hidden;
+    background: inherit;
+    padding: 35px 0 0 0;
+    border-right: 1px solid #080808;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
+.sidebar-nav {
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 40px;
+    line-height: 35px;
+}
+
+.sidebar-nav li a {
+    color: #ecf0f1 !important;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+.sidebar-nav li a:hover {
+    color: #3399ff !important;
+}
+
+/* Page Content */
+#page-content-wrapper,
+.gallery-container {
+    width: 100%;
+    position: absolute;
+    padding: 0;
+    margin: 0 auto;
+}
+
+/* Gallery */
+.gallery {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    width: 100%;
+}
+
+.gallery::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.gallery-item {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.gallery-item a,
+.gallery-item a img,
+.gallery-item a video {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+
+.gallery-item a img,
+.gallery-item a video {
+    max-width: 100%;
+}
+
+.gallery-item a div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(51, 123, 255, 0.8);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.gallery-item a:hover div {
+    opacity: 1;
+}
+
+.gallery-item a div h3 {
+    width: 100%;
+    color: #ecf0f1;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    letter-spacing: 2px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Media Queries */
+
+/* Desktop: Show sidebar, hide topbar */
+@media (min-width: 801px) {
+    #topbar-wrapper {
+        display: none;
+    }
+    
+    #page-content-wrapper, 
+    .gallery-container {
+        padding-left: 280px;
+        padding-top: 0;
+    }
+    
+    .gallery-item {
+        width: 25%;
+    }
+}
+
+/* Mobile: Hide sidebar, show topbar */
+@media (max-width: 800px) {
+    #sidebar-wrapper {
+        display: none;
+    }
+    
+    #page-content-wrapper, 
+    .gallery-container {
+        padding-left: 0;
+        padding-top: 225px;
+    }
+    
+    .gallery-item {
+        width: 100%;
+    }
+}
+
+/* Gallery responsive breakpoints */
+@media screen and (max-width: 1500px) and (min-width: 801px) {
+    .gallery-item {
+        width: 33.33333%;
+    }
+}
+
+@media screen and (max-width: 1100px) and (min-width: 801px) {
+    .gallery-item {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .gallery-item {
+        width: 100%;
+    }
+}

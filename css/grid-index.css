@@ -1,0 +1,122 @@
+/* Grid for Index Page - Enhanced for modern high-resolution displays */
+.grid {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    width: 100%;
+    display: block;
+    max-height: fit-content;
+    overflow: hidden;
+}
+
+.grid::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.grid-item,
+.grid > div { /* Also target your embed-responsive divs */
+    position: relative;
+    float: left;
+    overflow: hidden;
+    /* REMOVED: pointer-events: none; - this was blocking hover! */
+    margin-bottom: 0;
+}
+
+.grid-item a,
+.grid-item a img,
+.grid-item a video {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+
+.grid-item a img,
+.grid-item a video {
+    max-width: 100%;
+}
+
+/* Hover overlay styles */
+.grid-item a div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--overlay-blue); /* Use CSS variable */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    opacity: 0;  /* Hidden by default */
+    transition: opacity 0.8s ease;
+}
+
+.grid-item a:hover div {
+    opacity: 1 !important;  /* Show on hover - added !important for testing */
+}
+
+.grid-item a div h3 {
+    width: 100%;
+    color: var(--text-muted); /* Use CSS variable */
+    text-transform: uppercase;
+    font-size: 1.4em;
+    letter-spacing: 2px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Enhanced responsive scaling for modern high-res displays */
+
+/* 8K and very large displays */
+@media (min-width: 2400px) {
+    .grid-item,
+    .grid > div {
+        /*width: 20%; /* 5 columns on ultra-wide displays */
+        width: 33.33333%; /* 3 columns on 2K displays */
+    }
+}
+
+/* 4K displays */
+@media (max-width: 2399px) and (min-width: 1600px) {
+    .grid-item,
+    .grid > div {
+        /*width: 25%; /* 4 columns on 4K displays */
+        width: 33.33333%; /* 3 columns on 2K displays */
+        /*width: 50%; /* 2 columns on standard displays */
+    }
+}
+
+/* 2K displays */
+@media (max-width: 1599px) and (min-width: 1200px) {
+    .grid-item,
+    .grid > div {
+        /*width: 33.33333%; /* 3 columns on 2K displays */
+        width: 50%; /* 2 columns on standard displays */
+    }
+}
+
+/* Standard HD displays */
+@media (max-width: 1199px) and (min-width: 801px) {
+    .grid-item,
+    .grid > div {
+        width: 50%; /* 2 columns on standard displays */
+    }
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+    .grid-item,
+    .grid > div {
+        width: 100%; /* 1 column on mobile */
+    }
+}
+
+/* Very small mobile screens */
+@media screen and (max-width: 320px) {
+    .grid-item,
+    .grid > div {
+        width: 100%;
+    }
+}

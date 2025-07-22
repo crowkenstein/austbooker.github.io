@@ -1,0 +1,28 @@
+/* Page Content */
+#page-content-wrapper,
+.gallery-container {
+    width: 100%;
+    position: absolute;
+    padding: 0;
+    margin: 0 auto;
+    min-height: calc(100vh - 225px); /* Fill remaining space on mobile */
+    background: var(--bg-primary); /* Fill with background color */
+}
+
+/* Layout Media Queries */
+@media (min-width: 801px) {
+    #page-content-wrapper, 
+    .gallery-container {
+        padding-left: 280px;
+        padding-top: 0;
+        min-height: 100vh; /* Full height on desktop */
+    }
+}
+
+@media (max-width: 800px) {
+    #page-content-wrapper, 
+    .gallery-container {
+        padding-left: 0;
+        padding-top: 225px;
+    }
+}
