@@ -2,9 +2,9 @@
 
 const siteLinks = [
   {
-    href: "avatar.html",
-    img: "img/avatar.png",
-    title: "Avatar Renderings"
+    href: "apes.html",
+    img: "img/apes/apes_main.png",
+    title: "Ape$h!t"
   },
   {
     href: "https://www.fabulingua.com",
