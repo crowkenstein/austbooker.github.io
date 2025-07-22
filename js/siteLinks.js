@@ -7,6 +7,16 @@ const siteLinks = [
     title: "Ape$h!t"
   },
   {
+    href: "barbie.html",
+    img: "img/barbie/Barbie_Lofi_Close.png",
+    title: "Barbie"
+  },
+  {
+    href: "chester.html",
+    img: "img/chester/Chester_Close",
+    title: "Chester Cheetah"
+  },    
+  {
     href: "https://www.fabulingua.com",
     img: "img/fabulingua.png",
     title: "FabuLingua"
