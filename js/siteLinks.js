@@ -13,7 +13,7 @@ const siteLinks = [
   },
   {
     href: "chester.html",
-    img: "img/chester/Chester_Close",
+    img: "img/chester/Chester_Far.png",
     title: "Chester Cheetah"
   },    
   {
