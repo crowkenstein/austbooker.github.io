@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <meta name="description" content="eGym - Avatar">
+    <meta name="author" content="Austin Booker">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Fabulingua - Austin Booker</title>
+
+    <!-- Load all CSS files -->
+    <script src="js/load-styles.js"></script>
+
+</head>
+
+<body>
+ 
+<div id="nav-placeholder"></div>
+
+<div id="wrapper">
+    <!--Page Content-->  
+    <div id="page-content-wrapper">
+        
+        <!-- Opening Description -->
+        <!-- <section class="template-hero-bg hero-top">
+            <div class="template-hero-inner">
+                <h1>Fabulingua</h1>
+                    <p>
+                        Avatar creation project featuring character development and animation workflows.
+                    </p>
+            </div>
+        </section> -->
+        
+        <!-- First Video -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 nopadding">
+                    <ul class="gallery">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <video class="embed-responsive-item" autoplay loop muted style="object-fit: cover;">
+                                <source src="img/fabulingua/fabulingua_Spine2D.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>  
+
+        <!-- First Text -->
+        <!-- <section class="template-hero-bg hero-top">
+            <div class="template-hero-inner">
+                <h2>
+                    Avatar Development
+                </h2>
+                <p>
+                    Description of the avatar development process and techniques used.
+                </p>
+            </div>
+         </section>  -->
+        
+        <!-- First Image -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 nopadding">
+                    <ul class="gallery">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <img src="img/fabulingua/fabulingua_concept_01.png" class="embed-responsive-item" style="object-fit: cover;">
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>  
+        
+        <!-- Second Text -->
+        <!-- <section class="template-hero-bg hero-top">
+            <div class="template-hero-inner">
+                <h2>
+                    Character Rigging
+                </h2>
+                <p>
+                    Description of the character rigging process and technical implementation.
+                </p>
+            </div>
+         </section>  -->
+
+         <!-- Second Video -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 nopadding">
+                    <ul class="gallery">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <video class="embed-responsive-item" autoplay loop muted style="object-fit: cover;">
+                                <source src="img/fabulingua/fabulingua_settings.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>  
+
+        <!-- Third Text -->
+        <!-- <section class="template-hero-bg hero-top">
+            <div class="template-hero-inner">
+                <h2>
+                    Avatar Development
+                </h2>
+                <p>
+                    Description of the avatar development process and techniques used.
+                </p>
+            </div>
+         </section>  -->
+        
+        <!-- Second Image -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 nopadding">
+                    <ul class="gallery">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <img src="img/fabulingua/fabulingua_card.png" class="embed-responsive-item" style="object-fit: cover;">
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div> 
+
+        <!-- Fourth Text -->
+        <!-- <section class="template-hero-bg hero-top">
+            <div class="template-hero-inner">
+                <h2>
+                    Character Rigging
+                </h2>
+                <p>
+                    Description of the character rigging process and technical implementation.
+                </p>
+            </div>
+        </section>  -->
+
+        <!-- Third Video -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 nopadding">
+                    <ul class="gallery">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" 
+                                    src="https://www.youtube.com/embed/oQJ1YpYK_-U?si=6a5f3aN-47cwlLiZ&amp;loop=1&amp;playlist=oQJ1YpYK_-U&amp;rel=0&amp;modestbranding=1&amp;showinfo=0&amp;controls=1" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Final Description -->
+        <!-- <section class="template-hero-bg" style="margin: 0;">
+            <div class="template-hero-inner">
+                <h2>Value</h2>
+                <p>
+                    Summary of the project's value and key learnings from the avatar creation process.
+                </p>
+            </div>
+        </section> -->
+        
+    </div>
+</div>
+
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
+
+    <script>
+      fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('nav-placeholder').innerHTML = data;
+          var script = document.createElement('script');
+          script.src = 'js/siteLinks.js';
+          script.onload = function() {
+            var sidebarScript = document.createElement('script');
+            sidebarScript.src = 'js/sidebarLinks.js';
+            document.body.appendChild(sidebarScript);
+          };
+          document.body.appendChild(script);
+        });
+    </script>
+
+</body>
+
+</html>

@@ -83,8 +83,8 @@
     .grid-item,
     .grid > div {
         /*width: 25%; /* 4 columns on 4K displays */
-        width: 33.33333%; /* 3 columns on 2K displays */
-        /*width: 50%; /* 2 columns on standard displays */
+        /*width: 33.33333%; /* 3 columns on 2K displays */
+        width: 50%; /* 2 columns on standard displays */
     }
 }
 

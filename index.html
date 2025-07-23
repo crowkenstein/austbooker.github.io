@@ -5,124 +5,59 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <meta name="description" content="Contact Austin Booker - Resume and Contact Information">
-    <meta name="author" content="Austin Booker">
+    <meta name="description" content="">
+    <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Contact - Austin Booker</title>
+    <title>Austin Booker</title>
 
     <!-- Load all CSS files -->
     <script src="js/load-styles.js"></script>
-
-    <!-- Hide navigation and styling for this page -->
-    <style>
-    #sidebar-wrapper,
-    #topbar-wrapper,
-    #nav-placeholder {
-        display: none !important;
-    }
-
-    #page-content-wrapper {
-        padding-left: 0 !important;
-        padding-top: 0 !important;
-    }
-
-    /* Remove background color from hero sections */
-    .template-hero-bg {
-        background: transparent !important;
-    }
-
-    /* Button container styling */
-    .button-container {
-        margin-top: 2em;
-        display: flex;
-        gap: 1em;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    /* Button styling - all buttons use primary style */
-    .construction-btn {
-        display: inline-block;
-        padding: 15px 20px;
-        border-radius: 5px;
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        text-decoration: none !important;
-        transition: all 0.3s ease;
-        text-align: center;
-        min-width: 180px;
-        background: var(--brand-primary) !important;
-        color: white !important;
-    }
-
-    .construction-btn:hover {
-        background: var(--brand-secondary) !important;
-        color: var(--bg-primary) !important;
-        text-decoration: none !important;
-    }
-
-    /* Mobile responsive - stack buttons */
-    @media (max-width: 800px) {
-        .button-container {
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .construction-btn {
-            min-width: 250px;
-        }
-    }
-    </style>
-
 </head>
 
 <body>
+ 
+<div id="nav-placeholder"></div>
 
 <div id="wrapper">
-    <div id="page-content-wrapper">
-        
-        <!-- Under Construction Content -->
-        <section class="template-hero-bg hero-top">
-            <div class="template-hero-inner">
-                <h1>Austin Booker</h1>
-                <p>
-                    This site is currently under construction.
-                </p>
-                <p>
-                    Let's connect on LinkedIn to discuss opportunities and projects.
-                </p>
-                
-                <!-- Three side by side buttons -->
-                <div class="button-container">
-                    <a href="resume/AustinBooker_Resume.pdf" 
-                       target="_blank" 
-                       class="construction-btn">
-                        Download Resume (PDF)
-                    </a>
-                    
-                    <a href="https://linkedin.com/in/austbooker" 
-                       target="_blank" 
-                       class="construction-btn">
-                        View LinkedIn Profile
-                    </a>
-                    
-                    <a href="https://www.artstation.com/crowkenstein" 
-                       target="_blank" 
-                       class="construction-btn">
-                        View ArtStation
-                    </a>
-                </div>
+
+    <!--Page Content-->  
+      <div id="page-content-wrapper">
+          <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 nopadding">
+  <script src="js/siteLinks.js"></script>
+  <script src="js/gridBuilder.js"></script>  <!-- Changed from galleryBuilder.js -->
+  <ul class="grid"></ul>  <!-- Uses .grid class -->
             </div>
-        </section>        
-    </div>
+                </div>
+          </div>        
+      </div>
+
 </div>
 
-<!-- Scripts -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
+
+    <script>
+      fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('nav-placeholder').innerHTML = data;
+          var script = document.createElement('script');
+          script.src = 'js/siteLinks.js';
+          script.onload = function() {
+            var sidebarScript = document.createElement('script');
+            sidebarScript.src = 'js/sidebarLinks.js';
+            document.body.appendChild(sidebarScript);
+          };
+          document.body.appendChild(script);
+        });
+    </script>
 
 </body>
+
 </html>

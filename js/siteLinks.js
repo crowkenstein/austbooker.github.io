@@ -3,43 +3,43 @@
 const siteLinks = [
   {
     href: "apes.html",
-    img: "img/apes/apes_main.png",
+    img: "img/apes/apes.png",
     title: "Ape$h!t"
+  },
+  {
+    href: "chester.html",
+    img: "img/chester/chester.png",
+    title: "Chester Cheetah"
   },
   {
     href: "barbie.html",
     img: "img/barbie/Barbie_Lofi_Close.png",
     title: "Barbie"
+  },  
+  {
+    href: "monster.html",
+    img: "img/monster/monster.png",
+    title: "Monster High"
   },
   {
-    href: "chester.html",
-    img: "img/chester/Chester_Far.png",
-    title: "Chester Cheetah"
+    href: "egym.html",
+    img: "img/egym/egym.png",
+    title: "eGYM"
+  },
+  {
+    href: "environments.html",
+    img: "img/environments/environments.png",
+    title: "Environments"
   },    
   {
-    href: "https://www.fabulingua.com",
-    img: "img/fabulingua.png",
+    href: "fabulingua.html",
+    img: "img/fabulingua/fabulingua.png",
     title: "FabuLingua"
-  },
-  {
-    href: "https://support.lenovo.com/us/en/videos/nvid500019/",
-    img: "img/lenovo.png",
-    title: "Lenovo VR"
   },
   {
     href: "myherojourney.html",
-    img: "img/dot.png",
+    img: "img/myherojourney/hero.png",
     title: "My Hero Journey"
-  },
-  {
-    href: "avatar.html",
-    img: "img/avatar.png",
-    title: "Avatar Renderings"
-  },
-  {
-    href: "https://www.fabulingua.com",
-    img: "img/fabulingua.png",
-    title: "FabuLingua"
   }
   // Add more items as needed
 ]; 
