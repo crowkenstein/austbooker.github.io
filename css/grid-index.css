@@ -73,8 +73,9 @@
 @media (min-width: 2400px) {
     .grid-item,
     .grid > div {
-        /*width: 20%; /* 5 columns on ultra-wide displays */
-        width: 33.33333%; /* 3 columns on 2K displays */
+        /*width: 25%; /* 4 columns on 4K displays */
+        /*width: 33.33333%; /* 3 columns on 2K displays */
+        width: 50%; /* 2 columns on standard displays */
     }
 }
 
